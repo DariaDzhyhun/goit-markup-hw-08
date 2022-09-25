@@ -2,13 +2,16 @@
     background-color: var(--second-body-color);
 }
 .team__list{
-    
+   
     margin:  var(--margin-none);
-@media screen and (min-width:$tablet) {
+@media screen and (min-width:$tablet) and (max-width: $desktop)  {
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
     }
+@media screen and (min-width: $desktop) {
+            display: flex;
+        }
 }
 .team__item {
     background-color: var(--white-color);

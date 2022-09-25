@@ -344,11 +344,16 @@ a:focus {
 .team__list {
   margin: var(--margin-none);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .team__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    display: flex;
   }
 }
 
