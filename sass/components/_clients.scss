@@ -1,15 +1,25 @@
-// .clients__list {
-//     display: flex;
-
-// }
+.clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+   
+}
 .clients__item {
     color: var(--icons-color);
     fill: currentColor;
-    // width: calc((100% - 150px) / 6);
-    // margin-right: var(--column-gap);
-    // &:last-child {
-    //         margin-right: var(--margin-none);
-    //     }
+
+    @media screen and (max-width:$tablet){
+       flex-basis:calc((100% - 30px) / 2);
+        }
+    @media screen and (min-width:$tablet) {
+            flex-basis: calc((100% - 60px) / 3);
+        }
+    @media screen and (min-width:$desktop) {
+            flex-basis: calc((100% - 150px) / 6)
+        }
+    
+       
 }
 
 .clients__link {
@@ -29,5 +39,4 @@
 }
 
 .clients__icon {
-    fill: currentColor;
-}
+    fill: currentColor; }
