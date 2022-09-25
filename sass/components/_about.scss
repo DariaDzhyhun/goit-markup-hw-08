@@ -1,12 +1,15 @@
 .about-section {
     padding-top: 0;
+    @media screen and (max-width:$desktop) {
+        display: none;
+    }
 }
 
-// .about-section__gallery {
-//     display: flex;
-//     margin: var(--margin-none);
-//     column-gap: var(--column-gap);
-// }
+.about-section__gallery {
+    display: flex;
+    margin: var(--margin-none);
+    column-gap: var(--column-gap);
+}
 
 .about-section__container {
     position: relative;
@@ -17,9 +20,9 @@
     width: 100%;
     height: 70px;
     bottom: 0;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     font-weight: 700;
     font-size: 14px;
