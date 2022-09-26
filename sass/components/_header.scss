@@ -2,13 +2,53 @@
     background-color: var(--white-color);
     font-weight: 500;
     border-bottom: solid 1px #ECECEC;
+    position: relative;
 }
 
-// .header__container {
-//     display: flex;
-// }
+.header__container {
+    display: flex;
+}
+ 
+.mobile-menu__container {
+    display: none;
+    background-color:var(--white-color) ;
+    padding: 40px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+ 
+}
+.mobile-menu__button {
+    @media screen and (max-width:$tablet){
+        display: inline-flex;
+        margin: var(--margin-none);
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
 
+        & .mobile-menu__icon--close {
+            display: none;
+        }
+    }
+    @media screen and (min-width:$tablet) {
+        display: none;
+    }
+}
+    
 
+    .mobile-menu--is-open {
+
+        & .mobile-menu__icon--close, .mobile-menu__container {
+            display: block;
+        }
+
+        & .mobile-menu__icon--open {
+            display: none;
+        }
+    }
 
 
 

@@ -115,15 +115,66 @@ a:focus {
   background-color: var(--white-color);
   font-weight: 500;
   border-bottom: solid 1px #ECECEC;
+  position: relative;
+}
+
+.header__container {
+  display: flex;
+}
+
+.mobile-menu__container {
+  display: none;
+  background-color: var(--white-color);
+  padding: 40px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu__button {
+    display: inline-flex;
+    margin: var(--margin-none);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+  }
+  .mobile-menu__button .mobile-menu__icon--close {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__button {
+    display: none;
+  }
+}
+
+.mobile-menu--is-open .mobile-menu__icon--close, .mobile-menu--is-open .mobile-menu__container {
+  display: block;
+}
+.mobile-menu--is-open .mobile-menu__icon--open {
+  display: none;
 }
 
 .logo__link {
-  margin-right: 93px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   color: var(--black-color);
+}
+@media screen and (max-width: 1200px) {
+  .logo__link {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo__link {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo {
@@ -178,6 +229,11 @@ a:focus {
 .contact__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+@media screen and (max-width: 768px) {
+  .contact__icon {
+    display: none;
+  }
 }
 .contact__icon:hover,
 .contact__icon :focus {
@@ -369,11 +425,6 @@ a:focus {
   .team__item {
     max-width: 450px;
     margin: var(--margin-none);
-  }
-}
-@media screen and (max-width: 1200px) {
-  .team__item {
-    max-width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {

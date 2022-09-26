@@ -20,10 +20,20 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container  header__container"><a href="./index.html" class="logo__link link"><span
-                    class="logo">Web</span>Studio</a>
-            <nav class="navigation">
+                    class="logo">Web</span>Studio</a> 
+                    <button  type="button" class="mobile-menu__button mobile-menu mobile-menu--is-open"
+             aria-expanded="false"
+            >
+                <svg width="40" height="40" aria-label="button mobile menu" >
+                    <use  class="mobile-menu__icon--open " href="./images/icons.svg#icon-burger" ></use>
+                    <use  class="mobile-menu__icon--close " href="./images/icons.svg#icon-close" ></use>
+                </svg>
+            </button>
+            <div class="mobile-menu__container mobile-menu mobile-menu--is-open"   aria-expanded="false">
+                <nav class="navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="./index.html" class="navigation__link navigation__link--active">Студія</a></li>
+                    <li class="navigation__item"><a href="./index.html" class="navigation__link navigation__link--active">Студія</a>
+                    </li>
                     <li class="navigation__item"> <a href="./portfolio.html" class="link navigation__link"> Портфоліо </a></li>
                     <li class="navigation__item"> <a href="" class=" navigation__link"> Контакти</a></li>
                 </ul>
@@ -37,7 +47,8 @@
                             height="16">
                             <use href="./images/icons.svg#icon-smartphone"></use>
                         </svg> +38 096 111 11 11</a></li>
-            </ul>
+            </ul></div>
+           
         </div>
     </header>
     <main>
@@ -377,6 +388,7 @@
         </div>
     </div>
     <script src="./modal.js"></script>
+    <script src="./mobile-menu.js"></script>
 </body>
 
 

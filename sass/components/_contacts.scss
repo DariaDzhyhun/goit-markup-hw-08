@@ -1,12 +1,13 @@
 .header__contacts {
     list-style: none;
     padding-left: 0px;
-    // display: flex;
     padding: 0px;
     margin: var(--margin-none);
-    // margin-left: auto;
     color: var(--primary-text-color);
     fill: currentColor;
+    // margin-left: auto; 
+    // display: flex;
+    
 
 
 }
@@ -41,6 +42,10 @@
 }
 
 .contact__icon {
+    @media screen and (max-width:$tablet){
+        display: none;
+    }
+    
     margin-right: 10px;
     fill: currentColor;
 

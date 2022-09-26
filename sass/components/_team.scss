@@ -26,7 +26,7 @@
         margin: var(--margin-none);
     }
     @media screen and (max-width:$desktop) {
-             max-width: 354px;
+            //  max-width: 354px;
          }
     @media screen and (min-width:$desktop) {
         width: calc((100% - 90px)/4);
