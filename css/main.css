@@ -847,6 +847,15 @@ a:focus {
   padding-bottom: 60px;
 }
 
+.footer--container {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .footer--container {
+    flex-direction: column;
+  }
+}
+
 .address {
   font-style: normal;
   margin-top: 20px;
@@ -868,6 +877,12 @@ a:focus {
   padding: 0px;
 }
 
+.join__container {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
 .join {
   text-transform: uppercase;
   font-weight: 700;
@@ -879,6 +894,9 @@ a:focus {
 
 .join__contact-list {
   margin: var(--margin-none);
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -898,8 +916,13 @@ a:focus {
   border-radius: 50%;
 }
 
-.footer-form--container {
-  margin-left: auto;
+@media screen and (max-width: 768px) {
+  .footer-form--container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .footer-form__title {
