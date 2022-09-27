@@ -4,6 +4,11 @@
 .team__list{
    
     margin:  var(--margin-none);
+    @media screen and (max-width:$tablet) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
 @media screen and (min-width:$tablet) and (max-width: $desktop)  {
       display: flex;
       flex-wrap: wrap;
@@ -22,11 +27,12 @@
             margin-right: var(--margin-none);
         }
     @media screen and (max-width:$tablet) {
+        
         max-width: 450px;
         margin: var(--margin-none);
     }
     @media screen and (max-width:$desktop) {
-            //  max-width: 354px;
+           
          }
     @media screen and (min-width:$desktop) {
         width: calc((100% - 90px)/4);

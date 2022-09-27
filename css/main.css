@@ -184,9 +184,19 @@ a:focus {
 .logo__link--inverse {
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   padding: 0px;
+}
+@media screen and (max-width: 1200px) {
+  .logo__link--inverse {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo__link--inverse {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .navigation {
@@ -399,6 +409,13 @@ a:focus {
 
 .team__list {
   margin: var(--margin-none);
+}
+@media screen and (max-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .team__list {
@@ -853,6 +870,13 @@ a:focus {
 @media screen and (max-width: 768px) {
   .footer--container {
     flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer--container {
+    flex-wrap: wrap;
+    text-align: center;
   }
 }
 
@@ -860,6 +884,11 @@ a:focus {
   font-style: normal;
   margin-top: 20px;
   padding: 0px;
+}
+@media screen and (max-width: 768px) {
+  .address {
+    margin-bottom: 60px;
+  }
 }
 
 .address__list {
@@ -880,7 +909,13 @@ a:focus {
 .join__container {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+}
+@media screen and (max-width: 768px) {
+  .join__container {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
 }
 
 .join {
@@ -902,6 +937,9 @@ a:focus {
 
 .join__link {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--white-color);
   fill: currentColor;
   background-color: rgba(255, 255, 255, 0.1);
@@ -934,6 +972,11 @@ a:focus {
   text-transform: uppercase;
 }
 
+.footer-form__input--container {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-form__input {
   height: 50px;
   padding: 15px 16px;
@@ -946,6 +989,11 @@ a:focus {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
+@media screen and (max-width: 768px) {
+  .footer-form__input {
+    width: 100%;
+  }
+}
 
 .footer-form__button {
   display: flex;
@@ -956,7 +1004,6 @@ a:focus {
   padding: 10px 28px;
   width: 200px;
   height: 50px;
-  margin-left: 12px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -966,4 +1013,16 @@ a:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0px;
+}
+@media screen and (max-width: 1200px) {
+  .footer-form__button {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-form__button {
+    margin-left: 12px;
+  }
 }/*# sourceMappingURL=main.css.map */
