@@ -1,13 +1,15 @@
 .butttons-list {
     list-style: none;
-
     display: flex;
     column-gap: 8px;
     padding-left: 0px;
     justify-content: center;
     margin-bottom: var(--margin-none);
     margin-top: var(--margin-none);
-
+@media screen and (max-width:$tablet) {
+    flex-wrap: wrap;
+}
+@media screen and (max-width:$tablet) {}
 }
 
 .butttons-list__button {
@@ -38,26 +40,50 @@
 
 .products {
     margin-top: 50px;
-    margin-right: calc(-1 * var(--column-gap));
-    margin-bottom: calc(-1 * var(--column-gap));
     display: flex;
+@media screen and (max-width:$tablet) {
+        flex-direction: column;
+        gap: 30px;
+        
+    }
+
+@media screen and (min-width:$tablet) {
+    flex-direction: row;
     flex-wrap: wrap;
+    gap: 30px;
 
 }
 
+@media screen and (min-width:$desktop) {
+    margin-right: calc(-1 * var(--column-gap));
+    margin-bottom: calc(-1 * var(--column-gap));
+   }
+}
+
 .products__item{
-    width: calc(100% /3 - var(--column-gap));
+    @media screen and (max-width:$tablet) {
+            max-width: 450px;
+
+        }
+    
+    @media screen and (min-width:$tablet) {
+        flex-basis: calc((100% - 30px)/2);
+    }
+    
+    @media screen and (min-width:$desktop){
+      width: calc(100% /3 - var(--column-gap));
     margin-right: var(--column-gap);
     margin-bottom: var(--column-gap);
+   
     &:nth-child(3n) {
             margin-right: var(--margin-none);
         }
+    }
 }
 
 
 
 .products__link {
-
 
     text-decoration: none;
     color: var(--primary-text-color);
@@ -65,6 +91,13 @@
     line-height: 1.87;
     margin: var(--margin-none);
     display: block;
+    
+    @media screen and (min-width: $tablet){
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     }
+    
 
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,&:focus {
@@ -107,6 +140,7 @@
 
 .products__description {
     padding: 20px 24px;
+    flex-grow: 1;
     width: 370px;
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
