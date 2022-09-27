@@ -41,15 +41,15 @@
 
     .mobile-menu--is-open {
 
-        & .mobile-menu__icon--close, .mobile-menu__container {
+        & .mobile-menu__icon--close {
             display: block;
         }
+      
 
         & .mobile-menu__icon--open {
             display: none;
         }
     }
-
 
 
 

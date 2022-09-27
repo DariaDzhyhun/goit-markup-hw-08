@@ -152,7 +152,7 @@ a:focus {
   }
 }
 
-.mobile-menu--is-open .mobile-menu__icon--close, .mobile-menu--is-open .mobile-menu__container {
+.mobile-menu--is-open .mobile-menu__icon--close {
   display: block;
 }
 .mobile-menu--is-open .mobile-menu__icon--open {
