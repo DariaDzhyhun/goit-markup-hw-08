@@ -47,7 +47,7 @@
         
     }
 
-@media screen and (min-width:$tablet) {
+@media screen and (max-width:$desktop) {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
@@ -55,6 +55,7 @@
 }
 
 @media screen and (min-width:$desktop) {
+    flex-wrap: wrap;
     margin-right: calc(-1 * var(--column-gap));
     margin-bottom: calc(-1 * var(--column-gap));
    }
@@ -92,7 +93,7 @@
     margin: var(--margin-none);
     display: block;
     
-    @media screen and (min-width: $tablet){
+    @media screen and  (max-width: $desktop){
      display: flex;
      flex-direction: column;
      height: 100%;
