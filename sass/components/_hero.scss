@@ -6,10 +6,16 @@
     background-position: center;
     flex-direction: column;
     text-align: center;
-    // padding-top: 200px;
-    // padding-bottom: 200px;
-    // max-width: 1600px;
-    // margin: 0 auto;
+ @media screen and (max-width:$desktop) {
+      padding: 118px 0;
+ }
+ @media screen and (min-width:$desktop) {
+    padding: 200px 0;
+    max-width: 1600px;
+    margin: 0 auto;
+ }
+ 
+
 
 
 }
@@ -19,6 +25,8 @@
     font-weight: 900;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
     @media screen and (max-width:$desktop) {
         font-size: 26px;
         line-height: 1.62;
@@ -28,8 +36,7 @@
         line-height: 1.34;
     }
 
-    margin-left: auto;
-    margin-right: auto;
+    
     // width: 696px;
 }
 .hero__button {

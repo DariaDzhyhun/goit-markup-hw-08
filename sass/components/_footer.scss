@@ -14,15 +14,38 @@
     @media screen and (max-width:$tablet){
     flex-direction: column;
     text-align: center;
+    
     }
     @media screen and (min-width:$tablet) {
             flex-wrap: wrap;
-            //  flex-direction: column;
             text-align: center;
+            justify-content: center;
        
          }
-    // column-gap: 70px;
-    // align-items: baseline;
+   @media screen and (min-width:$desktop){
+    column-gap: 70px;
+    align-items: baseline;
+}
+    
+}
+.footer__content{
+    display: flex;
+    margin-bottom: 60px;
+@media screen and (max-width:$tablet) {
+    flex-direction: column;
+            
+ }
+ @media screen and (min-width:$tablet){
+            
+            column-gap: 165px;
+            margin-left: auto;
+            margin-right: auto;
+ }
+@media screen and (min-width:$desktop){
+    column-gap: 70px;
+    margin: 0;
+    align-items: baseline;
+}
 }
 .address {
     font-style: normal;
@@ -52,7 +75,7 @@
     @media screen and (max-width:$tablet){
         justify-content: center;
         align-items: center;
-        margin-bottom: 60px;
+        
     }
     // align-items:baseline;
 }
@@ -103,7 +126,11 @@
         align-items: center;
         text-align: center;
     }
-    // margin-left: auto;
+// @media screen and (max-width:$tablet){
+//      margin-left: auto;
+
+// }
+    
 }
 
 .footer-form__title {
@@ -119,15 +146,14 @@
 .footer-form__input--container {
     display: flex;
     flex-direction: column;
+ @media screen and (min-width:$desktop){
+    flex-direction: row;
+ }
     
     
    
 }
 .footer-form__input {
-    @media screen and (max-width:$tablet) {
-            width: 100%;
-        }
-    // width: 358px;
     height: 50px;
     padding: 15px 16px;
 
@@ -139,6 +165,16 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+ @media screen and (max-width:$tablet) {
+      width: 100%;
+ }
+ @media screen and (min-width:$tablet) {
+     width: 450px;
+ }
+ @media screen and (min-width:$desktop) {
+    width: 358px;
+}
+
 }
 
 
