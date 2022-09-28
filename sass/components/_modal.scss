@@ -162,30 +162,32 @@
 .agreement__title {
     display: block;
     margin-left: 8px;
-    padding-left: 10px;
-    font-size: 14px;
+    padding-left: 15px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+ @media screen and(max-width:$desktop) {
+    font-size: 12px;
+        }
+    
+ @media screen and(min-width:$desktop) {
+     font-size: 14px;
+        }
+    
+}
+.agreement__title--margin{
     margin-bottom: 30px;
 }
-
 .checkbox__icon {
     display: inline-block;
     position: absolute;
     top: 5px;
-    // left: 14px;
     width: 16px;
     height: 15px;
     border: 2px solid var(--title-text-color);
     border-radius: 2px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    @media screen and (max-width: $desktop) {
-        left: -10px;
-    }
-    @media screen and (min-width: $desktop) {
-        left: 0px;
-    }
+   
 .checkbox:checked+& {
         background-color: var(--accent-color);
         background-image: url(../images/icon\ check.svg);
@@ -200,11 +202,15 @@
 
 .agreement__link {
     text-decoration:underline;
-    font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--accent-color);
-
+@media screen and(max-width:$desktop) {
+    font: size 12px;
+}
+@media screen and(min-width:$desktop) {
+    font: size 14px;
+}
  &:hover {
     text-decoration: none;
 }
