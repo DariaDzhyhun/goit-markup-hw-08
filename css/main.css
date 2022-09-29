@@ -296,6 +296,7 @@ a:focus {
 .mobile-menu__container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding-top: 48px;
   padding-left: 40px;
   height: 100%;
@@ -305,19 +306,25 @@ a:focus {
   .mobile-menu__button--close {
     display: inline-flex;
     margin: var(--margin-none);
-    padding: 0;
     border: none;
     background-color: transparent;
     width: 40px;
     height: 40px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 15px;
     fill: currentcolor;
+    line-height: 0;
   }
   .mobile-menu__button--close:hover, .mobile-menu__button--close:focus {
     fill: var(--accent-color);
   }
+}
+
+.mobile-menu--position {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-menu__mobile-navigation {
@@ -343,8 +350,8 @@ a:focus {
 }
 
 .mobile-menu__contact-list-mobile {
-  margin-bottom: var(--margin-none);
-  margin-top: 302px;
+  margin: var(--margin-none);
+  width: 100%;
 }
 
 .contact-list-mobile__item + .contact-list-mobile__item {
@@ -352,10 +359,13 @@ a:focus {
 }
 
 .contact-list-mobile__tel {
+  display: block;
   font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  text-align: start;
+  width: 100%;
 }
 
 .contact-list-mobile__mail {
@@ -367,8 +377,9 @@ a:focus {
 .mobile-menu__social-media-list {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   margin-top: 64px;
-  margin-bottom: 0px;
+  margin-bottom: 48px;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
