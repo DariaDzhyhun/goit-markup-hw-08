@@ -22,13 +22,12 @@
         <div class="container  header__container"><a href="./index.html" class="logo__link link"><span
                     class="logo">Web</span>Studio</a> 
                     <button  type="button" class="mobile-menu__button--open"
-             aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+                 aria-controls="mobile-menu" data-menu-open>
                 <svg width="40" height="40" aria-label="button mobile menu" >
                     <use  class="mobile-menu__icon--open" href="./images/icons.svg#icon-burger" ></use>
                 </svg>
             </button>
             <div class="header-menu__container">
-                
                 <nav class="navigation">
                 <ul class="navigation__list">
                     <li class="navigation__item"><a href="./index.html" class="navigation__link navigation__link--active">Студія</a>
@@ -49,10 +48,10 @@
             </ul></div>
            
         </div>
-        <div class="mobile-menu">
+        <div class="mobile-menu " data-menu>
             <div class="container mobile-menu__container">
-                <button type="button" class="mobile-menu__button--close">
-                    <svg width="40" height="40" aria-label="button mobile menu">
+                <button type="button" class="mobile-menu__button--close" data-menu-close>
+                    <svg width="40" height="40" aria-label="button mobile menu" >
                         <use  class="mobile-menu__icon--close" href="./images/icons.svg#icon-close" ></use>
                     </svg> </button>
                    
@@ -61,8 +60,8 @@
                             <li class="list-navigation__item"><a href="./index.html"
                                     class="list-navigation__link list-navigation__link--active">Студія</a>
                             </li>
-                            <li class="list-navigation__item"> <a href="./portfolio.html" class="list-navigation__link"> Портфоліо </a></li>
-                            <li class="list-navigation__item"> <a href="" class="list-navigation__link "> Контакти</a></li>
+                            <li class="list-navigation__item"> <a href="./portfolio.html"> Портфоліо </a></li>
+                            <li class="list-navigation__item"> <a href="" > Контакти</a></li>
                         </ul>
                     </nav>
                     <div class="mobile-menu--position">
@@ -73,10 +72,10 @@
                     </ul>
                    
                     <ul class="mobile-menu__social-media-list">
-                        <li class="social-media__item"><a href="" class="social-media__link">Instagram</a></li>
-                        <li class="social-media__item"><a href="" class="social-media__link">Twitter</a></li>
-                        <li class="social-media__item"><a href="" class="social-media__link">Facebook</a></li>
-                        <li class="social-media__item"><a href="" class="social-media__link">LinkedIn</a></li>
+                        <li class="social-media__item"><a href="">Instagram</a></li>
+                        <li class="social-media__item"><a href="">Twitter</a></li>
+                        <li class="social-media__item"><a href="">Facebook</a></li>
+                        <li class="social-media__item"><a href="">LinkedIn</a></li>
                     </ul></div>
             </div>
 
@@ -421,7 +420,7 @@
         </div>
     </div>
     <script src="./modal.js"></script>
-    <!-- <script src="./mobile-menu.js"></script> -->
+    <script src="./mobile-menu.js"></script>
 </body>
 
 

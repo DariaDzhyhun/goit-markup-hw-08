@@ -130,9 +130,15 @@ a:focus {
 .header-menu__container {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .header-menu__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 @media screen and (max-width: 768px) {
-  .mobile-menu__button {
+  .mobile-menu__button--open {
     display: inline-flex;
     margin: var(--margin-none);
     padding: 0;
@@ -142,9 +148,12 @@ a:focus {
     height: 40px;
   }
 }
-.mobile-menu__button .mobile-menu__icon--close {
-  display: block;
+@media screen and (min-width: 768px) {
+  .mobile-menu__button--open {
+    display: none;
+  }
 }
+
 .logo__link {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -283,6 +292,8 @@ a:focus {
 }
 
 .mobile-menu {
+  opacity: 0;
+  pointer-events: none;
   background-color: var(--white-color);
   position: fixed;
   top: 0;
@@ -291,6 +302,14 @@ a:focus {
   height: 100%;
   z-index: 100;
   letter-spacing: 0.02em;
+  visibility: hidden;
+  transform: scale(1);
+}
+
+.mobile-menu.is-open {
+  visibility: visible;
+  opacity: 1;
+  transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu__container {
@@ -396,10 +415,7 @@ a:focus {
   height: 22px;
   margin: var(--margin-none);
   background-color: rgba(33, 33, 33, 0.2);
-}
-
-.social-media__link {
-  padding: 0 10px;
+  margin: 0 10px;
 }
 
 .hero {
