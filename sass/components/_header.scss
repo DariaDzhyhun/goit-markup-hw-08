@@ -7,16 +7,20 @@
 
 .header__container {
     display: flex;
+    @media screen and (max-width: $tablet){
+        justify-content: space-between;
+    }
+    
 }
  
 .mobile-menu__container {
     display: none;
-    background-color:var(--white-color) ;
-    padding: 40px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    // background-color:var(--white-color) ;
+    // padding: 40px;
+    // position: absolute;
+    // top: 100%;
+    // left: 0;
+    // width: 100%;
  
 }
 .mobile-menu__button {
@@ -29,27 +33,34 @@
         width: 40px;
         height: 40px;
 
-        & .mobile-menu__icon--close {
-            display: none;
-        }
+        // & .mobile-menu__icon--close {
+        //     display: block;
+     
+        // }
+     
     }
+ .mobile-menu__icon--close {
+     display: block;
+
+ }
     @media screen and (min-width:$tablet) {
-        display: none;
+        // display: none;
     }
 }
+
     
 
-    .mobile-menu--is-open {
+    // .mobile-menu--is-open {
 
-        & .mobile-menu__icon--close {
-            display: block;
-        }
+    //     & .mobile-menu__icon--close {
+    //         display: block;
+    //     }
       
 
-        & .mobile-menu__icon--open {
-            display: none;
-        }
-    }
+    //     & .mobile-menu__icon--open {
+    //         display: none;
+    //     }
+    // }
 
 
 
