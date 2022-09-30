@@ -52,7 +52,7 @@
     }
 
 @media screen and (max-width:$desktop) {
-    flex-direction: row;
+    
     flex-wrap: wrap;
     gap: 30px;
   
@@ -73,7 +73,7 @@
     
     @media screen and (max-width:$tablet) {
         flex-basis: calc((100% - 30px) / 2);
-
+  
     }
     
     @media screen and (min-width:$desktop){

@@ -134,8 +134,16 @@
                 <h2 class="title">Чим ми займаємося</h2>
                 <ul class="about-section__gallery">
                     <li>
-                        <div class="about-section__container"><img src="./images/img-1.jpg" alt="зображеня-1" width="370"
-                                height="294">
+                        <div class="about-section__container">
+                          <picture>
+                            <!-- <source srcset="./images/image1-desk.webp    1x,./images/image1-desk@2x.webp 2x" media="(min-width: 1200px)" type="image/webp"> -->
+                            <source srcset="./images/about-section/" media="" />
+                            <source srcset="" media="" />
+                            <source srcset="" media="" />
+                            <source srcset="" media="" />
+                            <img src="./images/img-1.jpg" alt="зображеня-1">
+                          </picture>
+                            
                             <p class="about-section__text">Десктопні додатки</p>
                         </div>
                     </li>
