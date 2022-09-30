@@ -3,13 +3,16 @@
     display: flex;
     column-gap: 8px;
     padding-left: 0px;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: var(--margin-none);
     margin-top: var(--margin-none);
 @media screen and (max-width:$tablet) {
     flex-wrap: wrap;
+    width: 100%;
 }
-@media screen and (max-width:$tablet) {}
+@media screen and (min-width:$tablet) {
+    justify-content: center;
+}
 }
 
 .butttons-list__button {
@@ -23,6 +26,7 @@
     border-radius: 4px;
     border: 0px;
     padding: 6px 22px;
+    min-width: 74px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,&:focus {
@@ -44,10 +48,10 @@
 @media screen and (max-width:$tablet) {
         flex-direction: column;
         gap: 30px;
-        
+        align-items: center;
     }
 
-@media screen and (max-width:$desktop) {
+@media screen and (min-width:$desktop) {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
@@ -63,7 +67,7 @@
 
 .products__item{
     @media screen and (max-width:$tablet) {
-            max-width: 450px;
+            // max-width: 450px;
 
         }
     

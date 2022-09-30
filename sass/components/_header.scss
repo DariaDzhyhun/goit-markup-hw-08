@@ -7,8 +7,10 @@
 
 .header__container {
     display: flex;
-    @media screen and (max-width: $tablet){
-        justify-content: space-between;
+    justify-content: space-between;
+    @media screen and (min-width: $tablet){
+        column-gap: 88px;
+        flex-basis: calc((100% - 88px)/ 2);
     }
     
 }
@@ -18,7 +20,9 @@
     
  @media screen and (min-width:$tablet) {
         display: flex;
+        width: 100%;
         justify-content: space-between;
+        align-items: center;
 
     }
 }
@@ -42,18 +46,6 @@
 }
 
     
-
-    // .mobile-menu--is-open {
-
-    //     & .mobile-menu__icon--close {
-    //         display: block;
-    //     }
-      
-
-    //     & .mobile-menu__icon--open {
-    //         display: none;
-    //     }
-    // }
 
 
 

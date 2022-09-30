@@ -120,10 +120,12 @@ a:focus {
 
 .header__container {
   display: flex;
+  justify-content: space-between;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .header__container {
-    justify-content: space-between;
+    column-gap: 88px;
+    flex-basis: calc((100% - 88px) / 2);
   }
 }
 
@@ -133,7 +135,9 @@ a:focus {
 @media screen and (min-width: 768px) {
   .header-menu__container {
     display: flex;
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -246,8 +250,18 @@ a:focus {
   margin: var(--margin-none);
   color: var(--primary-text-color);
   fill: currentColor;
-  margin-left: auto;
   display: flex;
+}
+@media screen and (min-width: 768px) {
+  .header__contacts {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts {
+    flex-direction: row;
+    margin-left: auto;
+  }
 }
 
 .contacts__item {
@@ -255,8 +269,15 @@ a:focus {
   align-items: center;
   justify-content: baseline;
 }
-.contacts__item + .contacts__item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .contacts__item + .contacts__item {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item + .contacts__item {
+    margin-left: 50px;
+  }
 }
 
 .contacts__link {
@@ -730,15 +751,22 @@ a:focus {
   display: flex;
   column-gap: 8px;
   padding-left: 0px;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: var(--margin-none);
   margin-top: var(--margin-none);
 }
 @media screen and (max-width: 768px) {
   .butttons-list {
     flex-wrap: wrap;
+    width: 100%;
   }
 }
+@media screen and (min-width: 768px) {
+  .butttons-list {
+    justify-content: center;
+  }
+}
+
 .butttons-list__button {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -750,6 +778,7 @@ a:focus {
   border-radius: 4px;
   border: 0px;
   padding: 6px 22px;
+  min-width: 74px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .butttons-list__button:hover, .butttons-list__button:focus {
@@ -772,9 +801,10 @@ a:focus {
   .products {
     flex-direction: column;
     gap: 30px;
+    align-items: center;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .products {
     flex-direction: row;
     flex-wrap: wrap;
@@ -789,11 +819,6 @@ a:focus {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .products__item {
-    max-width: 450px;
-  }
-}
 @media screen and (min-width: 768px) {
   .products__item {
     flex-basis: calc((100% - 30px) / 2);

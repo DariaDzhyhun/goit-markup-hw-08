@@ -16,16 +16,23 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container  header__container"><a href="./index.html" class="logo__link link"><span
-                    class="logo">Web</span>Studio</a>
+<header class="header">
+    <div class="container  header__container"><a href="./index.html" class="logo__link link"><span
+                class="logo">Web</span>Studio</a>
+        <button type="button" class="mobile-menu__button--open" aria-controls="mobile-menu" data-menu-open>
+            <svg width="40" height="40" aria-label="button mobile menu">
+                <use class="mobile-menu__icon--open" href="./images/icons.svg#icon-burger"></use>
+            </svg>
+        </button>
+        <div class="header-menu__container">
             <nav class="navigation">
                 <ul class="navigation__list">
                     <li class="navigation__item"><a href="./index.html"
-                            class="link navigation__link ">Студія</a></li>
-                    <li class="navigation__item"> <a href="./portfolio.html" class="link navigation__link navigation__link--active"> Портфоліо </a>
+                            class="navigation__link navigation__link--active">Студія</a>
                     </li>
-                    <li class="navigation__item"> <a href="" class="link navigation__link"> Контакти</a></li>
+                    <li class="navigation__item"> <a href="./portfolio.html" class="link navigation__link"> Портфоліо
+                        </a></li>
+                    <li class="navigation__item"> <a href="" class=" navigation__link"> Контакти</a></li>
                 </ul>
             </nav>
             <ul class="header__contacts">
@@ -39,7 +46,44 @@
                         </svg> +38 096 111 11 11</a></li>
             </ul>
         </div>
-    </header>
+
+    </div>
+    <div class="mobile-menu " data-menu>
+        <div class="container mobile-menu__container">
+            <button type="button" class="mobile-menu__button--close" data-menu-close>
+                <svg width="40" height="40" aria-label="button mobile menu">
+                    <use class="mobile-menu__icon--close" href="./images/icons.svg#icon-close"></use>
+                </svg> </button>
+
+            <nav class="mobile-menu__mobile-navigation">
+                <ul class="mobile-navigation__list-navigation">
+                    <li class="list-navigation__item"><a href="./index.html"
+                            class="list-navigation__link list-navigation__link--active">Студія</a>
+                    </li>
+                    <li class="list-navigation__item"> <a href="./portfolio.html"> Портфоліо </a></li>
+                    <li class="list-navigation__item"> <a href=""> Контакти</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu--position">
+                <ul class="mobile-menu__contact-list-mobile">
+                    <li class="contact-list-mobile__item"><a href="tel:+380961111111" class="contact-list-mobile__tel">
+                            +380961111111</a></li>
+                    <li class="contact-list-mobile__item"> <a href="mailto:info@devstudio.com"
+                            class="contact-list-mobile__mail">
+                            info@devstudio.com </a></li>
+                </ul>
+
+                <ul class="mobile-menu__social-media-list">
+                    <li class="social-media__item"><a href="">Instagram</a></li>
+                    <li class="social-media__item"><a href="">Twitter</a></li>
+                    <li class="social-media__item"><a href="">Facebook</a></li>
+                    <li class="social-media__item"><a href="">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</header>
 
     <main>
         <section class="section">

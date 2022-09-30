@@ -5,11 +5,16 @@
     margin: var(--margin-none);
     color: var(--primary-text-color);
     fill: currentColor;
-    margin-left: auto; 
+    
     display: flex;
     
-
-
+@media screen and (min-width:$tablet){
+    flex-direction: column;
+}
+@media screen and (min-width:$desktop) {
+    flex-direction: row;
+    margin-left: auto;
+}
 }
 
 .contacts__item {
@@ -17,9 +22,16 @@
     align-items: center;
     justify-content: baseline;
 
+@media screen and(min-width:$tablet){
     &+& {
+            margin-left: 0;
+        }
+}
+@media screen and (min-width:$desktop){
+        &+& {
         margin-left: 50px;
     }
+}
 }
 
 .contacts__link {
