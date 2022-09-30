@@ -804,7 +804,7 @@ a:focus {
     align-items: center;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .products {
     flex-direction: row;
     flex-wrap: wrap;
@@ -819,7 +819,12 @@ a:focus {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
+  .products__item {
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 768px) {
   .products__item {
     flex-basis: calc((100% - 30px) / 2);
   }
@@ -848,7 +853,6 @@ a:focus {
   .products__link {
     display: flex;
     flex-direction: column;
-    height: 100%;
   }
 }
 .products__link:hover, .products__link:focus {
