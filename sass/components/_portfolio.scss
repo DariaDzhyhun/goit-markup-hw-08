@@ -9,6 +9,7 @@
 @media screen and (max-width:$tablet) {
     flex-wrap: wrap;
     width: 100%;
+    gap: 15px;
 }
 @media screen and (min-width:$tablet) {
     justify-content: center;
@@ -102,7 +103,8 @@
     @media screen and  (max-width: $desktop){
      display: flex;
      flex-direction: column;
-    //  height: 100%;
+     height: 100%;
+     width: 326px;
      }
     
 
@@ -152,6 +154,7 @@
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     color: var(--primary-text-color);
+
 }
 
 

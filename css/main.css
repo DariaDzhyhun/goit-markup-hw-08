@@ -777,6 +777,7 @@ a:focus {
   .butttons-list {
     flex-wrap: wrap;
     width: 100%;
+    gap: 15px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -870,6 +871,8 @@ a:focus {
   .products__link {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 326px;
   }
 }
 .products__link:hover, .products__link:focus {
