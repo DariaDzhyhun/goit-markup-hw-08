@@ -1,7 +1,7 @@
 .butttons-list {
     list-style: none;
     display: flex;
-    column-gap: 8px;
+    gap: 15px 8px;
     padding-left: 0px;
     justify-content: flex-start;
     margin-bottom: var(--margin-none);
@@ -44,22 +44,26 @@
 }
 
 .products {
-    margin-top: 50px;
+   
     display: flex;
 @media screen and (max-width:$tablet) {
         flex-direction: column;
         gap: 30px;
         align-items: center;
+        margin-top: 40px;
     }
 
-@media screen and (max-width:$desktop) {
-    
+@media screen and (min-width:$tablet) {
+    margin-top: 30px;
     flex-wrap: wrap;
     gap: 30px;
+    flex-direction: row;
+    align-items: stretch;
   
 }
 
 @media screen and (min-width:$desktop) {
+    margin-top: 50px;
     flex-wrap: wrap;
     margin-right: calc(-1 * var(--column-gap));
     margin-bottom: calc(-1 * var(--column-gap));
@@ -67,12 +71,8 @@
 }
 
 .products__item{
-    @media screen and (max-width:$tablet) {
-            max-width: 450px;
-
-        }
-    
-    @media screen and (max-width:$tablet) {
+   
+    @media screen and (min-width:$tablet) {
         flex-basis: calc((100% - 30px) / 2);
   
     }
@@ -104,7 +104,7 @@
      display: flex;
      flex-direction: column;
      height: 100%;
-     width: 326px;
+     
      }
     
 
@@ -123,7 +123,7 @@
     position: absolute;
     display: flex;
     width: 100%;
-    height: 294px;
+    height: 100%;
     align-items: center;
     padding-left: 24px;
     padding-right: 24px;

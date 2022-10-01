@@ -42,6 +42,7 @@ ul,
 ol {
   list-style: none;
   padding-left: 0px;
+  margin: 0;
 }
 
 a {
@@ -69,10 +70,15 @@ a:focus {
 .title {
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   margin-bottom: 50px;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+  }
 }
 
 .container {
@@ -82,9 +88,9 @@ a:focus {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -229,6 +235,10 @@ a:focus {
   display: block;
 }
 
+.navigation__link--active {
+  color: var(--accent-color);
+}
+
 .navigation__link--active::after {
   content: "";
   color: var(--accent-color);
@@ -272,6 +282,7 @@ a:focus {
 @media screen and (min-width: 768px) {
   .contacts__item + .contacts__item {
     margin-left: 0;
+    margin-top: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -302,7 +313,7 @@ a:focus {
   margin-right: 10px;
   fill: currentColor;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .contact__icon {
     display: none;
   }
@@ -314,7 +325,6 @@ a:focus {
 
 .mobile-menu {
   opacity: 0;
-  pointer-events: none;
   background-color: var(--white-color);
   position: fixed;
   top: 0;
@@ -337,8 +347,7 @@ a:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 48px;
-  padding-left: 40px;
+  padding: 48px 40px;
   height: 100%;
 }
 
@@ -351,7 +360,7 @@ a:focus {
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 0;
+    top: 8px;
     right: 15px;
     fill: currentcolor;
     line-height: 0;
@@ -419,7 +428,6 @@ a:focus {
   flex-wrap: wrap;
   width: 100%;
   margin-top: 64px;
-  margin-bottom: 48px;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
@@ -546,6 +554,7 @@ a:focus {
 }
 @media screen and (min-width: 768px) {
   .benefits__item {
+    margin-top: 0;
     flex-basis: calc((100% - 30px) / 2);
   }
 }
@@ -643,6 +652,7 @@ a:focus {
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .team__list {
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -657,7 +667,6 @@ a:focus {
 }
 @media screen and (max-width: 768px) {
   .team__item {
-    max-width: 450px;
     margin: var(--margin-none);
   }
 }
@@ -767,7 +776,7 @@ a:focus {
 .butttons-list {
   list-style: none;
   display: flex;
-  column-gap: 8px;
+  gap: 15px 8px;
   padding-left: 0px;
   justify-content: flex-start;
   margin-bottom: var(--margin-none);
@@ -813,7 +822,6 @@ a:focus {
 }
 
 .products {
-  margin-top: 50px;
   display: flex;
 }
 @media screen and (max-width: 768px) {
@@ -821,28 +829,28 @@ a:focus {
     flex-direction: column;
     gap: 30px;
     align-items: center;
+    margin-top: 40px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .products {
+    margin-top: 30px;
     flex-wrap: wrap;
     gap: 30px;
+    flex-direction: row;
+    align-items: stretch;
   }
 }
 @media screen and (min-width: 1200px) {
   .products {
+    margin-top: 50px;
     flex-wrap: wrap;
     margin-right: calc(-1 * var(--column-gap));
     margin-bottom: calc(-1 * var(--column-gap));
   }
 }
 
-@media screen and (max-width: 768px) {
-  .products__item {
-    max-width: 450px;
-  }
-}
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .products__item {
     flex-basis: calc((100% - 30px) / 2);
   }
@@ -872,7 +880,6 @@ a:focus {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 326px;
   }
 }
 .products__link:hover, .products__link:focus {
@@ -888,7 +895,7 @@ a:focus {
   position: absolute;
   display: flex;
   width: 100%;
-  height: 294px;
+  height: 100%;
   align-items: center;
   padding-left: 24px;
   padding-right: 24px;
@@ -969,6 +976,7 @@ a:focus {
     min-height: 581px;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 .backdrop.is-hidden .modal {
@@ -1174,7 +1182,7 @@ a:focus {
 .footer--container {
   display: flex;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer--container {
     flex-direction: column;
     text-align: center;

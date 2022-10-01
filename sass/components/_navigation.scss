@@ -29,6 +29,10 @@
 
 
 }
+.navigation__link--active {
+    color: var(--accent-color);
+}
+
 .navigation__link--active::after {
     content: '';
     color: var(--accent-color);

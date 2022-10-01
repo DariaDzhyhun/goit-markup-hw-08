@@ -10,7 +10,7 @@
      gap: 30px;
      }
  @media screen and (min-width:$tablet) and (max-width: $desktop)  {
-      
+    flex-direction: row;
      flex-wrap: wrap;
       gap: 30px;
     }
@@ -28,7 +28,7 @@
         }
     @media screen and (max-width:$tablet) {
         
-        max-width: 450px;
+        
         margin: var(--margin-none);
     }
     @media screen and (min-width:$tablet) {
