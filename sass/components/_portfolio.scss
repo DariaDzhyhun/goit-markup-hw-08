@@ -78,13 +78,8 @@
     }
     
     @media screen and (min-width:$desktop){
-      width: calc(100% /3 - var(--column-gap));
-    margin-right: var(--column-gap);
-    margin-bottom: var(--column-gap);
+     flex-basis: calc((100% - 60px)/3);
    
-    &:nth-child(3n) {
-            margin-right: var(--margin-none);
-        }
         
     }
 }

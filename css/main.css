@@ -72,13 +72,18 @@ a:focus {
   font-weight: 700;
   font-size: 28px;
   line-height: 1.16;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .title {
     font-size: 36px;
+    margin-bottom: 50px;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .container {
@@ -859,12 +864,7 @@ a:focus {
 }
 @media screen and (min-width: 1200px) {
   .products__item {
-    width: calc(33.3333333333% - var(--column-gap));
-    margin-right: var(--column-gap);
-    margin-bottom: var(--column-gap);
-  }
-  .products__item:nth-child(3n) {
-    margin-right: var(--margin-none);
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 
@@ -1220,6 +1220,7 @@ a:focus {
     column-gap: 165px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
