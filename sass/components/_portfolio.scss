@@ -78,7 +78,7 @@
     }
     
     @media screen and (min-width:$desktop){
-     flex-basis: calc((100% - 60px)/3);
+     flex-basis: calc(100% / 3 - 30px);
    
         
     }
