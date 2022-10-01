@@ -1209,13 +1209,14 @@ a:focus {
   display: flex;
   margin-bottom: 60px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer__content {
     flex-direction: column;
   }
 }
 @media screen and (min-width: 768px) {
   .footer__content {
+    align-items: baseline;
     column-gap: 165px;
     margin-left: auto;
     margin-right: auto;
