@@ -271,6 +271,7 @@ a:focus {
   .header__contacts {
     flex-direction: row;
     margin-left: auto;
+    align-items: baseline;
   }
 }
 
@@ -288,6 +289,7 @@ a:focus {
 @media screen and (min-width: 1200px) {
   .contacts__item + .contacts__item {
     margin-left: 50px;
+    margin-top: 0px;
   }
 }
 
@@ -547,7 +549,7 @@ a:focus {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .benefits__item + .benefits__item {
     margin-top: var(--column-gap);
   }

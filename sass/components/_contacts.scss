@@ -14,6 +14,7 @@
 @media screen and (min-width:$desktop) {
     flex-direction: row;
     margin-left: auto;
+    align-items: baseline;
 }
 }
 
@@ -32,6 +33,7 @@
 @media screen and (min-width:$desktop){
         &+& {
         margin-left: 50px;
+        margin-top: 0px;
     }
 }
 }
