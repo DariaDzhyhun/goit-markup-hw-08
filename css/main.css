@@ -1199,6 +1199,7 @@ a:focus {
   .footer--container {
     column-gap: 70px;
     align-items: baseline;
+    text-align: unset;
   }
 }
 
@@ -1260,6 +1261,11 @@ a:focus {
   .join__container {
     justify-content: center;
     align-items: center;
+  }
+}
+@media screen and (min-width: .join__container desktop) {
+  .join__container {
+    align-items: baseline;
   }
 }
 
